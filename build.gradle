@@ -3,6 +3,7 @@ buildscript {
 		springBootVersion = '1.4.0.RELEASE'
 	}
 	repositories {
+		mavenLocal()
 		mavenCentral()
 	}
 	dependencies {
@@ -22,6 +23,7 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 repositories {
+	mavenLocal()
 	mavenCentral()
 }
 
@@ -30,6 +32,8 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-data-jpa')
 	compile('org.springframework.boot:spring-boot-starter-data-redis')
 	compile('org.springframework.boot:spring-boot-starter-web')
+	compile('com.google.guava:guava:19.0')    //guava
+		
 	runtime('mysql:mysql-connector-java')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
